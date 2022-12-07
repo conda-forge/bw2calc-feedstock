@@ -23,6 +23,7 @@ requirements:
     - numpy
     - pypardiso  # [not (osx and arm64)]
     - python
+    - scikit-umfpack  # [osx and arm64]
     - scipy
     - stats_arrays
 
