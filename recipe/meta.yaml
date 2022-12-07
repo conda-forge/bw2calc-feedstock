@@ -10,7 +10,6 @@ source:
   sha256: 0bc9d26b98013be97a91f1fddf23ad42e65c95d638d50788493b52a401e8e895
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
@@ -22,7 +21,7 @@ requirements:
   run:
     - eight
     - numpy
-    - pypardiso
+    - pypardiso  # [not (osx and arm64)]
     - python >=3.4
     - scipy
     - stats_arrays
