@@ -10,29 +10,29 @@ source:
   sha256: 0bc9d26b98013be97a91f1fddf23ad42e65c95d638d50788493b52a401e8e895
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python >=3.4
+    - python
     - pip
     - setuptools
   run:
     - eight
     - numpy
-    - python >=3.4
+    - pypardiso  # [not (osx and arm64)]
+    - python
+    - scikit-umfpack  # [osx and arm64]
     - scipy
     - stats_arrays
 
 test:
   imports:
     - bw2calc
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/brightway-lca/brightway2-calc
