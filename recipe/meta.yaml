@@ -15,14 +15,14 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python
     - pip
     - setuptools
   run:
     - eight
     - numpy
     - pypardiso  # [not (osx and arm64)]
-    - python >=3.4
+    - python
     - scipy
     - stats_arrays
 
