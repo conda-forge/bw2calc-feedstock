@@ -1,5 +1,5 @@
 {% set name = "bw2calc" %}
-{% set version = "1.8.2" %}
+{% set version = "2.0.dev13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4129f60e98c08401d628e496d64cb05317e594fddb6ae9414b8bbe52cfdec765
+  sha256: fb3e8076d6048d3acda147c83534dced9568079cf9d8d8b7fb0153731a0f8d87
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -22,11 +22,11 @@ requirements:
     - pip
     - setuptools
   run:
-    - eight
-    - numpy
-    - pypardiso  # [not (osx and arm64)]
     - python
-    - scikit-umfpack  # [osx and arm64]
+    - bw_processing
+    - matrix_utils
+    - numpy
+    - pandas
     - scipy
     - stats_arrays
 
