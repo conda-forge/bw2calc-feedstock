@@ -1,11 +1,11 @@
-About bw2calc
-=============
+About bw2calc-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bw2calc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/brightway-lca/brightway2-calc
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bw2calc-feedstock/blob/main/LICENSE.txt)
 
 Summary: The calculation engine for the Brightway2 life cycle assessment framework.
 
@@ -314,3 +314,4 @@ Feedstock Maintainers
 * [@cmutel](https://github.com/cmutel/)
 * [@m-rossi](https://github.com/m-rossi/)
 * [@michaelweinold](https://github.com/michaelweinold/)
+
