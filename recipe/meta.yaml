@@ -10,18 +10,17 @@ source:
   sha256: 3b9987f0e587024787509f7826cdc9f5dcbb0fbd087d2d91503051d3aa0b9da7
 
 build:
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
-  build:
-    - python
   host:
-    - python
+    - python >=3.4
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.4
     - numpy
     - pandas
     - scipy
