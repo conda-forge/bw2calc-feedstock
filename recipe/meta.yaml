@@ -1,5 +1,5 @@
 {% set name = "bw2calc" %}
-{% set version = "2.0.dev13" %}
+{% set version = "2.0.dev14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fb3e8076d6048d3acda147c83534dced9568079cf9d8d8b7fb0153731a0f8d87
+  sha256: 3b9987f0e587024787509f7826cdc9f5dcbb0fbd087d2d91503051d3aa0b9da7
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -15,19 +15,18 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - python
   host:
     - python
     - pip
     - setuptools
   run:
     - python
-    - bw_processing
-    - matrix_utils
     - numpy
     - pandas
     - scipy
+    - bw_processing
+    - matrix_utils
     - stats_arrays
 
 test:
