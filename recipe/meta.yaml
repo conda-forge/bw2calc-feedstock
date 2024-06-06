@@ -21,11 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.9
-    - numpy
+    - bw_processing >=0.9.5
+    - json-logging
+    - matrix_utils >=0.4.3
+    - numpy <2
     - pandas
+    - pydantic
     - scipy
-    - bw_processing
-    - matrix_utils
     - stats_arrays
 
 test:
