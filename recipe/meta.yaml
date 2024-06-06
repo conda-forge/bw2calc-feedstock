@@ -29,6 +29,8 @@ requirements:
     - pydantic
     - scipy
     - stats_arrays
+    - pypardiso  # [not (osx and arm64)]
+    - scikit-umfpack  # [osx and arm64]
 
 test:
   imports:
