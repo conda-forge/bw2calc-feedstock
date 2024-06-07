@@ -31,8 +31,8 @@ requirements:
     - pydantic
     - scipy
     - stats_arrays
-    - numpy <2 # [not (osx and arm64)]
-    - numpy <=1.24 # [osx and arm64]
+    - numpy <2  # [not (osx and arm64)]
+    - numpy <=1.24  # [osx and arm64]
     - pypardiso  # [not (osx and arm64)]
     - scikit-umfpack  # [osx and arm64]
 
