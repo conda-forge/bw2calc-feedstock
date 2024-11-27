@@ -22,8 +22,13 @@ requirements:
     - pip
     - setuptools
   run:
+    - bw_processing >=1.0
     - eight
-    - numpy
+    - fsspec
+    - matrix_utils >=0.5
+    - numpy <2
+    - pandas
+    - pydantic
     - pypardiso  # [not (osx and arm64)]
     - python
     - scikit-umfpack  # [osx and arm64]
