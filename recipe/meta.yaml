@@ -25,7 +25,7 @@ requirements:
     - bw_processing >=1.0
     - eight
     - fsspec
-    - matrix_utils >=0.5
+    - matrix_utils >=0.6
     - numpy <2
     - pandas
     - pydantic
