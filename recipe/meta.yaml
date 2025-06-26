@@ -1,5 +1,5 @@
 {% set name = "bw2calc" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cb60733784b42ed69da15e5ca9ae54215d7863d67b22adb4be6bf4dabcce57ee
+  sha256: 56b0aae0834ed9caf32a2c9cebb8acc661c24ee34468774dbe69302ac8429bae
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -20,12 +20,12 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
+    - setuptools >=68.0
   run:
     - bw_processing >=1.0
     - fsspec
     - matrix_utils >=0.6
-    - numpy <2
+    - numpy <3
     - pandas
     - pydantic
     - pypardiso  # [not (osx and arm64)]
