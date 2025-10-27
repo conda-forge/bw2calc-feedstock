@@ -33,6 +33,7 @@ requirements:
     - scikit-umfpack  # [osx and arm64]
     - scipy
     - stats_arrays
+    - xarray
 
 test:
   imports:
