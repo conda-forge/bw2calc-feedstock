@@ -1,5 +1,5 @@
 {% set name = "bw2calc" %}
-{% set version = "2.2" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: afe6ae42754861ca3d2db3a434b00c09d226031ea71d28951aa8e01041a44bc9
+  sha256: e79aa96cc4a5881b5bc03a937e3a43903a4464ef54ac9ed4d4fda99723b172b9
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -33,6 +33,7 @@ requirements:
     - scikit-umfpack  # [osx and arm64]
     - scipy
     - stats_arrays
+    - xarray
 
 test:
   imports:
