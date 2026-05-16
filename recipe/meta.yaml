@@ -1,5 +1,5 @@
 {% set name = "bw2calc" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5c2f26291dc7946dbc0338e87bac53677857e73a6016baf3e42775280cde97ce
+  sha256: 533df462fcc45369535d60b7b85a00f8db04cbe6486ba2f4104bf052af9878cd
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
