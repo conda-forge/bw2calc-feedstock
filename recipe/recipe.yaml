@@ -1,5 +1,5 @@
 context:
-  version: "2.4.0"
+  version: "3.0.0"
 
 package:
   name: bw2calc
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bw2calc/bw2calc-${{ version }}.tar.gz
-  sha256: 5c2f26291dc7946dbc0338e87bac53677857e73a6016baf3e42775280cde97ce
+  sha256: dc3968691f3d049c7e1e8d3b1ad36a91f433f1ab09ff738504d4584478897ec6
 
 build:
   script: python -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
