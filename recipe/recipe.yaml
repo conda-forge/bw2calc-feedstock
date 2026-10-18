@@ -1,5 +1,5 @@
 context:
-  version: "2.4.0"
+  version: "3.1.0"
 
 package:
   name: bw2calc
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bw2calc/bw2calc-${{ version }}.tar.gz
-  sha256: 5c2f26291dc7946dbc0338e87bac53677857e73a6016baf3e42775280cde97ce
+  sha256: 496ef84ff3a4aceeb759e5120d39aac468251d8f77c89de702a397ae49895bd2
 
 build:
   script: python -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -19,20 +19,24 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
+    - if: osx
+      then:
+        - ${{ stdlib('c') }}
   host:
     - python
     - pip
     - setuptools >=68.0
   run:
-    - bw_processing >=1.0
+    - bw_processing >=1.6
     - fsspec
-    - matrix_utils >=0.6
+    - matrix_utils >=0.9
     - numpy <3
     - pandas
     - pydantic
     - python
     - scipy
     - stats_arrays
+    - threadpoolctl
     - xarray
     - if: osx and arm64
       then:
