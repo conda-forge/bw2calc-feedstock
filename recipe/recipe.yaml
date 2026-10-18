@@ -33,6 +33,7 @@ requirements:
     - python
     - scipy
     - stats_arrays
+    - threadpoolctl
     - xarray
     - if: osx and arm64
       then:
