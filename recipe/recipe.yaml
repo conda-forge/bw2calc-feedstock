@@ -19,6 +19,9 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
+    - if: osx
+      then:
+        - ${{ stdlib('c') }}
   host:
     - python
     - pip
