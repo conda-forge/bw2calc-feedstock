@@ -28,16 +28,16 @@ requirements:
     - setuptools >=68.0
   run:
     - bw_processing >=1.6
-    - fsspec
+    - fsspec >=2023.3.0
     - matrix_utils >=0.9
-    - numpy <3
-    - pandas
-    - pydantic
+    - numpy >=1.23.2,<3
+    - pandas >=1.5.0
+    - pydantic >=2
     - python
-    - scipy
-    - stats_arrays
-    - threadpoolctl
-    - xarray
+    - scipy >=1.11
+    - stats_arrays >=0.5.1
+    - threadpoolctl >=3.0.0
+    - xarray >=2023.9.0
     - if: osx and arm64
       then:
         - scikit-umfpack
